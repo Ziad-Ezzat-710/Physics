@@ -1,0 +1,93 @@
+/* Start Global */
+:root {
+    --main: #090910;
+    --text: #ADC2A9;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    background-image: url("../images/fractal-1280084_1920.jpg");
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul {
+    list-style: none;
+}
+/* End Global */
+/* Start Table */
+table {
+    color: var(--text);
+    table-layout: fixed;
+    width: calc(100% - 20px);
+    text-align: center;
+    margin: 40px 10px;
+}
+table * {
+    background-color: var(--main);
+} 
+table th, td, caption {
+    padding: 15px;
+}
+caption {
+    width: calc(100% - 5px);
+    transform: translateX(0.2%);
+    font-weight: 900;
+}
+table tr {
+    padding: 10px;
+}
+/* End Table */
+@media screen and (max-width: 600px) {
+    table thead {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    }
+    
+    table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+    }
+    
+    table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+    }
+    
+    table td::before {
+    content: attr(data-label);
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+
+    table tbody tr td:nth-child(3) a {
+        width: 54%;
+    }
+    table td:last-child {
+    border-bottom: 0;
+    }
+    table tbody tr:nth-child(4){
+        margin-bottom: 0; 
+    }
+    caption {
+        width: calc(100% - 5px);
+        transform: translateX(0.7%);
+    }
+}
